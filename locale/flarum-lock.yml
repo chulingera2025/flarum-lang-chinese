@@ -1,0 +1,48 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-lock:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      lock_discussions_label: 锁定讨论
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed as tooltips for discussion badges.
+    badge:
+      locked_tooltip: 已锁定
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      lock_button: 锁定
+      unlock_button: 解锁
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      discussion_locked_text: "{username} 锁定了讨论"
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      discussion_locked_text: "{username} 于 {time} 锁定了该讨论。"
+      discussion_unlocked_text: "{username} 于 {time} 解锁了该讨论。"
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_discussion_locked_label: 有人锁定了我发起的讨论
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
+    gambits:
+      discussions:
+        locked:
+          key: locked

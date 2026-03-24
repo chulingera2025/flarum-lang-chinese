@@ -1,0 +1,103 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-messages:
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+    permissions:
+      send_messages_label: 发送私信
+      delete_own_messages_label: 删除自己的私信
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    composer:
+      discard_confirmation: 你的私信尚未发送。确定要丢弃吗？
+      placeholder: 输入私信内容...
+      recipients: 收件人
+      submit_button: 发送私信
+      to: "发送给："
+
+    dialog_list:
+      load_more_button: => core.ref.load_more
+      mark_as_read_tooltip: 标记为已读
+      title: 私信
+      view_all: 查看全部私信
+
+    dialog_section:
+      back_label: 返回
+      cannot_reply_text: 该用户无法回复
+      controls:
+        details_button: 详情
+      controls_toggle_label: 切换对话操作
+      details_modal:
+        created_at: 创建时间
+        recipients: 参与者
+        title: 对话详情
+
+    header:
+      dropdown_tooltip: 私信
+
+    index:
+      messages_link: 私信
+
+    index_sort:
+      latest_button: 最近更新
+      newest_button: 最新创建
+      oldest_button: 最早
+
+    message_controls:
+      delete_button: 删除
+      delete_confirmation: 确定要删除这条私信吗？此操作无法撤销。
+
+    messages_page:
+      cannot_send_message_button: 无法发送私信
+      empty_text: 暂无新私信
+      hero:
+        title: 私信
+        subtitle: 你与其他用户的私密对话
+      mark_all_as_read_tooltip: 全部标记为已读
+      refresh_tooltip: 刷新
+      send_message_button: 发送私信
+      stream:
+        load_previous_button: 加载更早的消息
+        load_next_button: 加载更新的消息
+        start_of_the_conversation: 对话开始
+        time_lapsed_text: => core.forum.post_stream.time_lapsed_text
+      title: 私信
+
+    recipient_selection_modal:
+      title: 选择此私信的收件人
+
+    settings:
+      notify_message_received_label: 有人给我发私信
+
+    user_controls:
+      send_message_button: 发送私信
+      cannot_reply_text: 该用户无法回复
+
+    notifications:
+      message_received_text: 收到来自 {user} 的私信
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when a user is mentioned
+    message_received:
+      subject: "{user_display_name} 给你发来了一条私信"
+      plain:
+        body: |
+          {user_display_name} 给你发来了一条新私信。
+
+          {url}
+
+          ---
+
+          {content}
+      html:
+        body: "{user_display_name} 给你发来了一条[新私信]({url})。"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    dialog:
+      title: 与 {username} 私信

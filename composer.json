@@ -1,0 +1,55 @@
+{
+  "name": "chulingera2025/flarum-lang-chinese",
+  "description": "Flarum 简体中文语言包",
+  "authors": [
+    {
+      "name": "chulingera2025",
+      "email": "chulingera2025@gmail.com",
+      "homepage": "https://github.com/chulingera2025/flarum-lang-chinese"
+    }
+  ],
+  "keywords": [
+    "flarum",
+    "chinese",
+    "simplified",
+    "language-pack",
+    "zh-Hans"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "2.0.0-beta.8"
+  },
+  "suggest": {
+    "flarum/approval": "审核扩展翻译",
+    "flarum/bbcode": "BBCode 扩展翻译",
+    "flarum/emoji": "表情扩展翻译",
+    "flarum/flags": "举报扩展翻译",
+    "flarum/gdpr": "GDPR 数据保护扩展翻译",
+    "flarum/likes": "点赞扩展翻译",
+    "flarum/lock": "锁定扩展翻译",
+    "flarum/markdown": "Markdown 扩展翻译",
+    "flarum/mentions": "提及扩展翻译",
+    "flarum/messages": "私信扩展翻译",
+    "flarum/nicknames": "昵称扩展翻译",
+    "flarum/realtime": "实时扩展翻译",
+    "flarum/statistics": "统计扩展翻译",
+    "flarum/sticky": "置顶扩展翻译",
+    "flarum/subscriptions": "订阅扩展翻译",
+    "flarum/suspend": "封禁扩展翻译",
+    "flarum/tags": "标签扩展翻译"
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "简体中文",
+      "category": "language",
+      "icon": {
+        "image": "icon.svg"
+      }
+    },
+    "flarum-locale": {
+      "code": "zh-Hans",
+      "title": "简体中文"
+    }
+  }
+}

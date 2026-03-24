@@ -1,0 +1,34 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-nicknames:
+  admin:
+    basics:
+      display_name_driver_options:
+        nickname: 昵称
+    permissions:
+      edit_own_nickname_label: 编辑自己的昵称
+    settings:
+      max_label: 昵称最大长度
+      min_label: 昵称最小长度
+      random_username_label: 随机生成用户名
+      random_username_help: 这会在注册时隐藏 `username` 输入框，并改用随机数字。它也会让 `nickname` 字段变为必填项。仅在启用“允许在注册时设置昵称”后生效。
+      regex_label: 用于验证的正则表达式
+      set_on_registration_label: 允许在注册时设置昵称
+      unique_label: 昵称必须唯一
+    wrong_driver: 要使此扩展生效，你必须在 <a><strong>基础设置</strong></a> 页面将显示名称驱动选择为 “nickname”。
+  api:
+    invalid_nickname_message: 该昵称无效。请联系论坛管理员了解昵称规则。
+  forum:
+    change_nickname:
+      submit_button: => core.ref.save_changes
+      title: => flarum-nicknames.ref.change_nickname
+    edit_user:
+      nicknames_heading: => flarum-nicknames.ref.change_nickname
+      nicknames_text: => flarum-nicknames.ref.nickname
+    settings:
+      change_nickname_button: => flarum-nicknames.ref.change_nickname
+    sign_up:
+      nickname_placeholder: => flarum-nicknames.ref.nickname
+  ref:
+    change_nickname: 更改昵称
+    nickname: 昵称

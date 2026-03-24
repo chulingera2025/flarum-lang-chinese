@@ -1,0 +1,124 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-mentions:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the mentions permissions
+    permissions:
+      mention_groups_label: 提及用户组
+    # These translations are used in the mentions Settings page.
+    settings:
+      allow_username_format_label: 允许使用用户名提及格式 (@Username)
+      allow_username_format_text: |
+        当前用户提及的格式为 @"Display Name"#ID。
+        此设置允许使用旧格式 @Username，但保存时仍会在保存后转换为新格式。
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the composer (reply autocompletion function).
+    composer:
+      mention_tooltip: 提及用户、用户组或帖子
+      reply_to_post_text: "回复 #{number}"
+
+    # These translations are used by the mentioned by modal dialog.
+    mentioned_by:
+      title: 对此帖子的回复
+      load_more_button: => core.ref.load_more
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      others_text: => core.ref.some_others
+      post_mentioned_text: "{username} 回复了你的帖子"
+      user_mentioned_text: "{username} 提及了你"
+      group_mentioned_text: "{username} 提及了你所在的用户组"
+
+    # These translations are displayed beneath individual posts.
+    post:
+      mentioned_by_more_text: "还有 {count} 条回复。"
+      mentioned_by_self_text: "{users} 回复了此帖。"
+      mentioned_by_text: "{users} 回复了此帖。"
+      others_text: => core.ref.some_others
+      quote_button: 引用
+      reply_link: => core.ref.reply
+      you_text: => core.ref.you
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_post_mentioned_label: 有人回复了我的帖子
+      notify_user_mentioned_label: 有人在帖子中提及我
+      notify_group_mentioned_label: 有人在帖子中提及我所在的用户组
+
+    # These translations are used in the user profile page and profile popup.
+    user:
+      mentions_link: 提及
+
+    # These translations are used in the post mentions
+    post_mention:
+      deleted_text: "[未知]"
+
+    group_mention:
+      deleted_text: "[未知用户组]"
+
+  # Translations in this namespace are used in emails sent by the forum.
+  email:
+
+    # These translations are used in emails sent when a post is replied to
+    post_mentioned:
+      subject: "{replier_display_name} 在《{title}》中回复了你的帖子"
+      plain:
+        body: |
+          {replier_display_name} 在《{title}》中回复了你的帖子（#{post_number}）。
+
+          {url}
+
+          ---
+
+          {content}
+      html:
+        body: "{replier_display_name} 在 [{title}]({url}) 中回复了你的帖子（#{post_number}）。"
+
+    # These translations are used in emails sent when a user is mentioned
+    user_mentioned:
+      subject: "{mentioner_display_name} 在《{title}》中提及了你"
+      plain:
+        body: |
+          {mentioner_display_name} 在《{title}》的帖子中提及了你。
+
+          {url}
+
+          ---
+
+          {content}
+      html:
+        body: "{mentioner_display_name} 在 [{title}]({url}) 的帖子中提及了你。"
+    # These translations are used in emails sent when a group is mentioned
+    group_mentioned:
+      subject: "{mentioner_display_name} 在《{title}》中提及了你所在的用户组"
+      plain:
+        body: |
+          {mentioner_display_name} 在《{title}》中提及了你所在的用户组。
+
+          {url}
+
+          ---
+
+          {content}
+      html:
+        body: "{mentioner_display_name} 在 [{title}]({url}) 中提及了你所在的用户组。"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
+    gambits:
+      posts:
+        mentioned:
+          key: mentioned
+          hint: 被提及用户的 ID 或用户名

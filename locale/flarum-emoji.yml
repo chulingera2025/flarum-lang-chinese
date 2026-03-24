@@ -1,0 +1,23 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-emoji:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Settings page of the admin interface.
+    settings:
+      cdn_label: CDN 地址
+      cdn_help: "例如 https://cdn.jsdelivr.net/gh/jdecked/twemoji@[version]/assets/，当前版本为：{version}"
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the composer (emoji autocompletion function).
+    composer:
+      emoji_tooltip: 插入表情
+      type_to_search_text: 输入以搜索表情

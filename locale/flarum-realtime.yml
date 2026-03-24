@@ -1,0 +1,30 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-realtime:
+  forum:
+    push:
+      discussion-list-new-activity: "{count, plural, one {显示 # 个已更新的讨论} other {显示 # 个已更新的讨论}}"
+      discussion-list-new-activity-with-auto-release: "{count, plural, one {# 个讨论有} other {# 个讨论有}}更新动态，将在 {releaseTimeout} 秒后自动显示。点击立即显示。"
+    typing-indicator:
+      anonymous-user: "[匿名]"
+      people-are-typing: "{number, plural, one {# 人正在输入} other {# 人正在输入}}"
+      users-are-typing: "{count, plural, one {{users} 正在输入} other {{users}{others, plural, =1 { 与另外 # 人} =0 {} other { 与另外 # 人}} 正在输入}}"
+      no-activity: 暂无人正在输入
+    user:
+      settings:
+        heading: 实时
+        typing-indicator-type:
+          help: 启用后，输入提示会显示当前正在输入的用户；关闭后仅显示正在输入的用户数量。
+          label: 显示是谁在输入
+  admin:
+    permission:
+      view-who-types: 查看是谁在输入
+    settings:
+      release-discussion-updates: DiscussionList 更新
+      release-discussion-updates-help: 启用后，新讨论会按下方设定的间隔推送到 <code>DiscussionList</code> 中。
+      release-discussion-updates-interval: 自动推送讨论动态的间隔
+      release-discussion-updates-interval-help: 单位：秒。0 表示不自动推送。
+      notification-toast-dismiss-after: 通知提示持续时间
+      notification-toast-dismiss-after-help: 实时通知提示会在屏幕上停留多少秒后自动关闭。设为 0 可禁用提示通知。
+      typing-indicator: 输入提示
+      typing-indicator-help: 启用后，在权限允许的前提下，用户可以查看讨论中当前正在输入的其他用户数量。关闭后，输入活动会从界面和 WebSocket 负载中一并移除。

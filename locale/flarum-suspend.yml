@@ -1,0 +1,84 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-suspend:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      suspend_users_label: 封禁用户
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+    # These translations are used in the suspension notifications
+    notifications:
+      user_suspended_text: "你已被封禁，时长 {timeReadable}"
+      user_suspended_indefinite_text: 你已被无限期封禁
+      user_unsuspended_text: 你的封禁已解除
+
+    # These translations are used for the suspension reason informational modal to the suspended user.
+    suspension_info:
+      dismiss_button: 关闭
+      indefinite: 这是无限期封禁
+      limited: "本次封禁将持续至 {date}"
+      title: 此账号已被封禁
+
+    # These translations are used in the Suspend User modal dialog (admin function).
+    suspend_user:
+      display_message: 向用户显示的消息
+      indefinitely_label: 无限期封禁
+      limited_time_days_text: " 天"
+      limited_time_label: 限时封禁...
+      not_suspended_label: 未封禁
+      placeholder_optional: 可选
+      reason: 封禁原因
+      status_heading: 封禁状态
+      submit_button: => core.ref.save_changes
+      title: "封禁 {username}"
+
+    # These translations are displayed as tooltips for user badges.
+    user_badge:
+      suspended_tooltip: 已封禁
+
+    # These translations are found on the user profile page (admin function).
+    user_controls:
+      suspend_button: 封禁
+
+  # Translations in this namespace are used by suspension email notifications
+  email:
+    no_reason_given: 此次封禁未提供原因。
+    suspended:
+      subject: 你的账号已被封禁
+      plain:
+        body: |
+          你被封禁的原因如下：
+
+          ---
+          {suspension_message}
+          ---
+      html:
+        body: "你已在 {forumTitle} 被封禁，原因如下："
+
+    unsuspended:
+      subject: 你的账号已解除封禁
+      plain:
+        body: |
+          你的封禁已解除。你可以点击以下链接返回论坛：
+
+          {forum_url}
+      html:
+        body: "你的封禁已解除。准备好后，你可以返回 [{forumTitle}]({forum_url})。"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
+    gambits:
+      users:
+        suspended:
+          key: suspended

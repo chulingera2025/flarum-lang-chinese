@@ -1,0 +1,138 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-tags:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Basics page.
+    basics:
+      tags_label: => flarum-tags.ref.tags
+
+    # These translations are used in the Edit Tag modal dialog.
+    edit_tag:
+      color_label: => core.ref.color
+      delete_tag_button: 删除标签
+      delete_tag_confirmation: "确定要删除此标签吗？该标签下的讨论不会被删除。"
+      description_label: 描述
+      hide_label: 从所有讨论中隐藏
+      icon_label: => core.ref.icon
+      icon_text: => core.ref.icon_text
+      name_label: => flarum-tags.ref.name
+      name_placeholder: => flarum-tags.ref.name
+      slug_label: 别名
+      submit_button: => core.ref.save_changes
+      title: 创建标签
+
+    # These translations are used in the navigation bar.
+    nav:
+      tags_button: => flarum-tags.ref.tags
+      tags_text: 管理可用于整理讨论的标签列表。
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      allow_edit_tags_label: 允许编辑标签
+      bypass_tag_counts_label: 忽略标签数量限制
+      restrict_by_tag_heading: 按标签限制
+      tag_discussions_label: 为讨论添加标签
+
+    # These translations are used in the Tags custom settings component.
+    settings:
+      button_text: => flarum-tags.ref.choose_tags
+
+    # These translations are used in the Tag Settings modal dialog.
+    tag_settings:
+      range_separator_text: " 到 "
+      required_primary_heading: 主标签数量要求
+      required_primary_text: 输入每个讨论可应用的主标签最小与最大数量。
+      required_secondary_heading: 次标签数量要求
+      required_secondary_text: 输入每个讨论可应用的次标签最小与最大数量。
+      title: 标签设置
+
+    # These translations are used in the Tags page.
+    tags:
+      about_tags_text: "标签用于对讨论进行分类。主标签类似传统论坛版块：可组成两级层级结构。次标签没有层级或顺序，适合更细粒度的分类。"
+      create_primary_tag_button: 创建主标签
+      create_secondary_tag_button: 创建次标签
+      edit_tag_label: 编辑标签 {tag}
+      primary_heading: 主标签
+      secondary_heading: 次标签
+      settings_heading: 设置
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are displayed on the page that lists all tags.
+    all_tags:
+      meta_description_text: 所有标签
+      meta_title_text: => flarum-tags.ref.tags
+
+    # These translations are used by the Choose Tags modal dialog.
+    choose_tags:
+      edit_title: "编辑“{title}”的标签"
+      title: 为你的讨论选择标签
+
+    # These translations are used by the composer when starting a discussion.
+    composer_discussion:
+      choose_tags_link: => flarum-tags.ref.choose_tags
+
+    # These translations are used by the discussion control buttons.
+    discussion_controls:
+      edit_tags_button: 编辑标签
+
+    header:
+      back_to_tags_tooltip: 返回标签列表
+
+    # These translations are used on the index page, peripheral to the discussion list.
+    index:
+      more_link: 更多...
+      tags_link: => flarum-tags.ref.tags
+      untagged_link: 未加标签
+
+    # These translations are displayed between posts in the post stream.
+    post_stream:
+      added_and_removed_tags_text: "{username} 添加了 {tagsAdded}，并移除了 {tagsRemoved} {time}。"
+      added_tags_text: "{username} 添加了 {tagsAdded} {time}。"
+      removed_tags_text: "{username} 移除了 {tagsRemoved} {time}。"
+      tags_text: "{tags}"
+
+    # These translations are used when visiting a single tag's discussion list.
+    tag:
+      meta_description_text: "所有带有“{tag}”标签的讨论"
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # This translation is displayed in place of the name of a tag that's been deleted.
+    deleted_tag_text: 已删除
+
+    # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
+    gambits:
+      discussions:
+        tag:
+          key: tag
+          hint: 标签名称、用逗号分隔的多个标签名称，或 "untagged"
+
+    # These translations are used in the tag selection modal.
+    tag_selection_modal:
+      bypass_requirements: 忽略标签数量限制
+      choose_primary_placeholder: "{count, plural, one {选择 1 个主标签} other {选择 # 个主标签}}"
+      choose_secondary_placeholder: => flarum-tags.ref.choose_tags_placeholder
+      choose_tags_placeholder: => flarum-tags.ref.choose_tags_placeholder
+      submit_button: => core.ref.okay
+      title: => flarum-tags.ref.choose_tags
+
+  ##
+  # REUSED TRANSLATIONS - These keys should not be used directly in code!
+  ##
+
+  # These translations are referenced by two or more unique keys.
+  ref:
+    choose_tags: 选择标签
+    choose_tags_placeholder: "{count, plural, one {再选择 1 个标签} other {再选择 # 个标签}}"
+    name: 名称
+    tags: 标签

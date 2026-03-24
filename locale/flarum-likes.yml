@@ -1,0 +1,58 @@
+# 对应 Flarum 2.0.0-beta.8
+
+flarum-likes:
+
+  ##
+  # UNIQUE KEYS - The following keys are used in only one location each.
+  ##
+
+  # Translations in this namespace are used by the admin interface.
+  admin:
+
+    # These translations are used in the Permissions page of the admin interface.
+    permissions:
+      like_posts_label: 点赞帖子
+
+    settings:
+      like_own_posts_help: 启用后，在权限允许的情况下，用户可以给自己的帖子点赞。如需禁止用户给自己的帖子点赞，请关闭此设置。
+      like_own_posts_label: 允许用户给自己的帖子点赞
+
+  # Translations in this namespace are used by the forum user interface.
+  forum:
+
+    # These translations are used by the Notifications dropdown, a.k.a. "the bell".
+    notifications:
+      others_text: => core.ref.some_others
+      post_liked_text: "{username} 赞了你的帖子"
+
+    # These translations are displayed beneath individual posts.
+    post:
+      like_link: 赞
+      liked_by_self_text: "{users} 赞了这条帖子。"
+      liked_by_text: "{count, plural, one {{users} 赞了这条帖子} other {{users} 赞了这条帖子}}。"
+      others_link: => core.ref.some_others
+      unlike_link: 取消赞
+      you_text: => core.ref.you
+
+    # These translations are used by the Users Who Like This modal dialog.
+    post_likes:
+      title: 点赞的用户
+      load_more_button: => core.ref.load_more
+
+    # These translations are used in the Settings page.
+    settings:
+      notify_post_liked_label: 有人赞了我的帖子
+
+    # These translations are used in the User profile page.
+    user:
+      likes_link: 赞
+
+  # Translations in this namespace are used by the forum and admin interfaces.
+  lib:
+
+    # These translations are used by gambits. Gambit keys must be in snake_case, no spaces.
+    gambits:
+      posts:
+        likedBy:
+          key: likedBy
+          hint: 用户 ID 或用户名
